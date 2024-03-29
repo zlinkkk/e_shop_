@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Stolzl Medium'; 
+    src: url('../fonts/3422-font.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container.justify-content-end {
+    text-align: left;
+}
+
+.nav-link.fw-light{
+    font-size: 20px;
+}
+
+.nav-link.fw-light:hover {
+        color: #ff0000;
+        animation-duration: 0.5s;
+    }
+
+.head {
+    font-family: 'Stolzl Medium';
+    margin-left: 75px;
+    margin-top: 50px;
+}
+
+

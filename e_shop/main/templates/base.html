@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block links %}
+    {% endblock %}
+    <title>Название</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light " style = "background-color: #FDFDEC">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">logo</a>
+        </div>
+
+        <div class="container-fluid">
+            <input class="form-control me-2" type="search" placeholder="Найти что нибудь..." aria-label="Search" aria-describedby="inputGroup-sizing-default">
+            <button class="btn btn-outline-success" type="submit">Искать</button>
+        </div>
+
+        <div class="container justify-content-end">
+          <a class="nav-link fw-light" href="#">
+            <i class="fa-solid fa-user --fa-font-solid"></i> Войти
+          </a>
+        </div>
+      </nav>
+      {% block content %} {% endblock %}
+</body>
+</html>
