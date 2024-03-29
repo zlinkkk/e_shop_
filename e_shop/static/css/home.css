@@ -20,12 +20,49 @@
 
 .head {
     font-family: 'Stolzl Medium';
-    margin-left: 75px;
+    margin-left: 50px;
     margin-top: 50px;
 }
 
-.test{
-    background-color: black;
-    height: 600px;
-    width: 600px;
+.extra_head {
+    font-family: 'Stolzl Medium';
+    margin-left: 85px;
+}
+
+.card{
+    margin-left: 85px;
+    background-color: #fff;
+    width: 225px;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.card_img {
+    margin-left: 25px;
+    border-radius: 9px;
+    width: 150px;
+    height: auto;
+}
+
+.card_title {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.card_price{
+    font-size: 19px;
+}
+
+.btn_keeper{
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.btn{
+    background-color: #FFBB07;
+    padding: 7px 12px;
+    color: #eee;
+    border-radius: 4px;
 }
