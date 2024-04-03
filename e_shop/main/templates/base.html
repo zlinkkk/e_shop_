@@ -8,22 +8,32 @@
     <title>Название</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-light " style = "background-color: #FDFDEC">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">logo</a>
-        </div>
+  <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Каталог</a>
+              </li>
+          </ul>
 
-        <div class="container-fluid">
-            <input class="form-control me-2" type="search" placeholder="Найти что нибудь..." aria-label="Search" aria-describedby="inputGroup-sizing-default">
-            <button class="btn btn-outline-success" type="submit">Искать</button>
-        </div>
+          <form class="d-flex" role="search">
+              <input class="form-control me-2 custom" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
 
-        <div class="container justify-content-end">
-          <a class="nav-link fw-light" href="#">
-            <i class="fa-solid fa-user --fa-font-solid"></i> Войти
-          </a>
-        </div>
-      </nav>
+          <div class="d-flex ms-auto">
+              <a class="nav-link fw-light" href="#">
+                  <i class="fa-solid fa-user --fa-font-solid"></i> Войти
+              </a>
+          </div>
+      </div>
+  </div>
+</nav>
       {% block content %} {% endblock %}
 </body>
 </html>

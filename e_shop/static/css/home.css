@@ -8,7 +8,9 @@
 .container.justify-content-end {
     text-align: left;
 }
-
+.custom {
+    width: 500px !important;
+}
 .nav-link.fw-light{
     font-size: 20px;
 }
@@ -29,17 +31,24 @@
     margin-left: 85px;
 }
 
+.wrap {
+    display: flex;
+    align-items: center;
+}
+
+
 .card{
     margin-left: 85px;
-    background-color: #fff;
     width: 225px;
-    border-radius: 20px;
+    border-radius: 25px;
     padding: 15px;
+    border-width: 0.1px;
+    border-style: solid;
+    border-color: rgb(62, 62, 62) !important;
 }
 
 .card_img {
     margin-left: 25px;
-    border-radius: 9px;
     width: 150px;
     height: auto;
 }
@@ -66,3 +75,12 @@
     color: #eee;
     border-radius: 4px;
 }
+.card-2, .card-3, .card-4, .card-5, .card-6 {
+    margin-left: 30px;
+    width: 225px;
+    border-radius: 15px;
+    padding: 15px;
+    border-width: 0.1px;
+    border-style: solid;
+    border-color: rgb(62, 62, 62) !important;
+ }
