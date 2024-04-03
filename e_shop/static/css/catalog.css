@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Stolzl Medium'; 
+    src: url('../fonts/3422-font.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.h1{
+    font-family: 'Slolzl Medium';
+}

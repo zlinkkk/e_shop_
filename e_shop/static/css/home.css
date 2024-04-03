@@ -5,21 +5,6 @@
     font-style: normal;
 }
 
-.container.justify-content-end {
-    text-align: left;
-}
-.custom {
-    width: 500px !important;
-}
-.nav-link.fw-light{
-    font-size: 20px;
-}
-
-.nav-link.fw-light:hover {
-        color: #ff0000;
-        animation-duration: 0.5s;
-    }
-
 .head {
     font-family: 'Stolzl Medium';
     margin-left: 50px;
@@ -84,3 +69,16 @@
     border-style: solid;
     border-color: rgb(62, 62, 62) !important;
  }
+
+.main_section{
+    font-family: 'Stolzl Medium';
+    margin-top: 50px;
+    text-align: center;
+    list-style: none;
+}
+
+.main_section li {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 400;
+}
