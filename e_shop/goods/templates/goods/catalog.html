@@ -1,9 +1,12 @@
 {% extends "main/base.html" %} 
 {% load static %}
 
+{% block links %}
+  <link rel="stylesheet" href="{% static 'css/catalog.css' %}">
+{% endblock links %}
 
 {% block content%}
-    <h1>Каталог</h1>
+    <h1 class="head">Каталог</h1>
     
         {% for product in products %}
             {% if product.category == 'Категория 1' %}
