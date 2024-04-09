@@ -7,17 +7,18 @@
 
 {% block content%}
     <h1 class="head">Каталог</h1>
-    
-        {% for product in products %}
-            {% if product.category == 'Категория 1' %}
-              <div class="card">
-                <img src="{% static 'img/Без названия.jpg'%}" alt="" class="card_img">
-                  <div class="card_title">{{ product.name }}</div>
-                  <div class="card_price">{{ product.price}} ₽</div>
-                  <div class="btn_keeper">
-                    <button class = 'btn'>В корзину</button>
-                  </div> 
-                </div>
-            {% endif %}
-        {% endfor %}
+    <div class = 'wrap'>
+      {% for product in products %}
+        {% if product.category == 'Категория 1' %}
+          <div class="card">
+            <img src="{% static 'img/Без названия.jpg'%}" alt="" class="card_img">
+              <div class="card_title">{{ product.name }}</div>
+              <div class="card_price">{{ product.price}} ₽</div>
+              <div class="btn_keeper">
+                <button class = 'btn'>В корзину</button>
+              </div> 
+            </div>
+          {% endif %}
+      {% endfor %}
+    </div>
 {% endblock %}

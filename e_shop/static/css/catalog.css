@@ -11,6 +11,11 @@
     font-family: 'Stolzl Medium';
 }
 
+.wrap {
+    display: flex;
+    align-items: center;
+}
+
 .card {
     margin-left: 30px;
     width: 225px;
