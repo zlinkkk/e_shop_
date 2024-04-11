@@ -7,8 +7,7 @@ class Products(models.Model):
 
     name = models.CharField(max_length = 100)
     color = models.CharField(max_length = 30)
-    buy_price = models.FloatField(max_length = 100000)
-    sell_price = models.FloatField(max_length = 100000)
+    price = models.FloatField(max_length = 100000)
+    description = models.CharField(max_length=5000)
     img_link = models.CharField(max_length = 100)
-
-# class 
+    slug = models.SlugField(default = "", null = False)

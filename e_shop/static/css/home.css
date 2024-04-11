@@ -74,7 +74,7 @@
     font-family: 'Stolzl Medium';
     margin-top: 50px;
     text-align: center;
-    list-style: none;
+    text-decoration: none;
 }
 
 .main_section li {
