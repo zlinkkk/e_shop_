@@ -12,9 +12,13 @@
 {% block content%}
 
 <div class="catalog">
-    {% for product in products %}
+    {% for product in goods %}
     <div class="cards">
-      <img src="{{product.img_link}}" alt="{{ product.name }}" class="cards_img">
+      {% if product.image %}
+        <img src="{{product.image.url}}" alt="{{ product.name }}" class="cards_img">
+        {% else %}
+        <img src="{% static 'img/Без названия.jpg' %}" alt="{{ product.name }}" class="cards_img">
+      {% endif %}
       <div class="cards_title">{{ product.name }}</div>
       <div class="cards_price">{{ product.price }} ₽</div>
       <div class="btns_keeper">
