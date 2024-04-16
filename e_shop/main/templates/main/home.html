@@ -16,61 +16,24 @@
 <h1 class="head">Купить хозтовары недорого в Ставрополе</h1>
 <h3 class="extra_head">Популярное:</h3>
 
-<div class = 'wrap'>
-  <div class="card">
-    <img src="{% static 'img/Без названия.jpg'%}" alt="" class="card_img">
-      <div class="card_title">Мочалка</div>
-      <div class="card_price">190 ₽</div>
+
+<div class="wrap">
+    {% for product in goods %}
+    <div class="card">
+      {% if product.image %}
+        <img src="{{product.image.url}}" alt="{{ product.name }}" class="card_img">
+        {% else %}
+        <img src="{% static 'img/Без названия.jpg' %}" alt="{{ product.name }}" class="card_img">
+      {% endif %}
+      <div class="card_title">{{ product.name }}</div>
+      <div class="card_price">{{ product.price }} ₽</div>
       <div class="btn_keeper">
-        <button class = 'btn'>В корзину</button>
+          <button class="btns">В корзину</button>
       </div>
     </div>
-
-  <div class="card-2">
-    <img src="{% static 'img/Без названия.jpg'%}" alt="" class="card_img">
-      <div class="card_title">Мочалка</div>
-      <div class="card_price">190 ₽</div>
-      <div class="btn_keeper">
-        <button class = 'btn'>В корзину</button>
-      </div>
-  </div>
-
-  <div class="card-3">
-    <img src="{% static 'img/Без названия.jpg'%}" alt="" class="card_img">
-      <div class="card_title">Мочалка</div>
-      <div class="card_price">190 ₽</div>
-      <div class="btn_keeper">
-        <button class = 'btn'>В корзину</button>
-      </div>
-  </div>
-
-  <div class="card-4">
-    <img src="{% static 'img/Без названия.jpg'%}" alt="" class="card_img">
-      <div class="card_title">Мочалка</div>
-      <div class="card_price">190 ₽</div>
-      <div class="btn_keeper">
-        <button class = 'btn'>В корзину</button>
-      </div>
-  </div>
-
-  <div class="card-5">
-    <img src="{% static 'img/Без названия.jpg'%}" alt="" class="card_img">
-      <div class="card_title">Мочалка</div>
-      <div class="card_price">190 ₽</div>
-      <div class="btn_keeper">
-        <button class = 'btn'>В корзину</button>
-      </div>
-  </div>
-
-  <div class="card-6">
-    <img src="{% static 'img/Без названия.jpg'%}" alt="" class="card_img">
-      <div class="card_title">Мочалка</div>
-      <div class="card_price">190 ₽</div>
-      <div class="btn_keeper">
-        <button class = 'btn'>В корзину</button>
-      </div>
-  </div>
+    {% endfor %}
 </div>
+
 
 <div class="main_section">
   <h1>Почему именно мы:</h1>

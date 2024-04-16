@@ -1,6 +1,8 @@
 from django.shortcuts import render
-
-# Create your views here.
+from main.models import PopularProducts
 
 def home(request):
-    return render(request, 'main/home.html', {'title': 'Главная'})
+    objects = PopularProducts.objects.all()
+    return render(request, 'main/home.html', 
+        {'title': 'Главная',
+         'goods': objects})
