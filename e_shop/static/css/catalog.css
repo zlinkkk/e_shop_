@@ -14,9 +14,9 @@
 }
 
 .cards{
-    margin-left: 30px;
+    margin-left: 20px;
     width: 225px;
-    height: 200px;
+    height: 300px;
     border-radius: 25px;
     padding: 15px;
     border-width: 0.1px;
@@ -41,13 +41,14 @@
 }
 
 .btns_keeper{
-    margin-top: 20px;
+    margin-top: 12px;
     text-align: center;
     border-radius: 5px;
 }
 
 .btns {
     padding: 7px 12px;
-    color: #000000;
+    border: none;
+    background: #ffffff;
     border-radius: 4px;
 }

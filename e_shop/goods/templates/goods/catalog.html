@@ -5,17 +5,21 @@
   <link rel="stylesheet" href="{% static 'css/catalog.css' %}">
 {% endblock links %}
 
+{% block title %}
+  <title>{{ title }}</title>
+{% endblock %}
+
 {% block content%}
 
 <div class="catalog">
     {% for product in products %}
     <div class="cards">
-        <img src="{{ product.image_link }}" alt="{{ product.name }}" class="cards_img">
-        <div class="cards_title">{{ product.name }}</div>
-        <div class="cards_price">{{ product.price }} ₽</div>
-        <div class="btns_keeper">
-            <button class="btns">В корзину</button>
-        </div>
+      <img src="{{product.img_link}}" alt="{{ product.name }}" class="cards_img">
+      <div class="cards_title">{{ product.name }}</div>
+      <div class="cards_price">{{ product.price }} ₽</div>
+      <div class="btns_keeper">
+          <button class="btns">В корзину</button>
+      </div>
     </div>
     {% endfor %}
 </div>
