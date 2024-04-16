@@ -7,4 +7,16 @@
 
 {% block content%}
 
+<div class="catalog">
+    {% for product in products %}
+    <div class="cards">
+        <img src="{{ product.image_link }}" alt="{{ product.name }}" class="cards_img">
+        <div class="cards_title">{{ product.name }}</div>
+        <div class="cards_price">{{ product.price }} ₽</div>
+        <div class="btns_keeper">
+            <button class="btns">В корзину</button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}
