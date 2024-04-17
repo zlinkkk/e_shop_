@@ -25,7 +25,7 @@
 .card{
     margin-left: 30px;
     width: 225px;
-    border-radius: 25px;
+    border-radius: 15px !important;
     padding: 15px;
     border-width: 0.1px;
     border-style: solid;

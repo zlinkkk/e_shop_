@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+.head{
+    font-family: 'Stolzl Medium';
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+}
+
 .catalog {
     display: grid;
     align-items: center;
@@ -17,7 +24,7 @@
     margin-left: 20px;
     width: 225px;
     height: 300px;
-    border-radius: 25px;
+    border-radius: 15px;
     padding: 15px;
     border-width: 0.1px;
     border-style: solid;
@@ -27,7 +34,7 @@
 .cards_img {
     margin-left: 25px;
     width: 150px;
-    height: auto;
+    height: 150px;
 }
 
 .cards_title {
@@ -41,13 +48,14 @@
 }
 
 .btns_keeper{
-    margin-top: 12px;
+    margin-top: 10px;
     text-align: center;
     border-radius: 5px;
 }
 
 .btns {
+    background-color: white;
     padding: 7px 12px;
-    border: none;
+    border: 0.1px solid black !important;
     border-radius: 4px;
 }
