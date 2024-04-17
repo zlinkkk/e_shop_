@@ -1,10 +1,14 @@
+from typing import Any
 from django.shortcuts import render
-
 from goods.models import Products
-
+from goods.utils import query_search
 
 def catalog(request):
-    goods = Products.objects.all()
+    query = request.GET.get('q', None)
+    if query:
+        goods = query_search(query)
+    else:
+        goods = Products.objects.all()
     return render(request, 'goods/catalog.html', {
         'title': 'Каталог',
         'goods': goods
