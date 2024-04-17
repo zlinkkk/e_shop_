@@ -23,7 +23,7 @@
 
 
 .card{
-    margin-left: 85px;
+    margin-left: 30px;
     width: 225px;
     border-radius: 25px;
     padding: 15px;
@@ -35,7 +35,7 @@
 .card_img {
     margin-left: 25px;
     width: 150px;
-    height: auto;
+    height: 150px;
 }
 
 .card_title {
@@ -54,22 +54,18 @@
     border-radius: 5px;
 }
 
-.btn{
-    background-color: #FFBB07;
+.btns{
+    background-color: white;
     padding: 7px 12px;
-    color: #eee;
     border-radius: 4px;
+    border: 0.1px solid black !important;
 }
 
-.card-2, .card-3, .card-4, .card-5, .card-6 {
-    margin-left: 30px;
-    width: 225px;
-    border-radius: 15px;
-    padding: 15px;
-    border-width: 0.1px;
-    border-style: solid;
-    border-color: rgb(62, 62, 62) !important;
- }
+.btns:hover {
+    border: 0.1px solid red !important;
+    font-size: 16.2px;
+    animation-duration: 0.9s;
+}
 
 .main_section{
     font-family: 'Stolzl Medium';
