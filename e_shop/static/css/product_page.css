@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Stolzl Medium'; 
+    src: url('../fonts/3422-font.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.wrap{
+    display: flex;
+}
+
+.image{
+    align-items: center;
+    width: 800px;
+    height: 700px;
+}
+
+.params {
+    margin-top: 20px;
+    margin-left: 10px;
+    flex-direction: column;
+    font-family: 'Stolzl Medium';
+}
+
+.name {
+    text-align: center;
+    font-size: 35px;
+}
+
+.desc {
+    font-size: 25px;
+}
+
+.color{
+    font-size: 30px;
+}
+
+.price{
+    margin-top: 100px;
+    margin-left: 10px;
+    font-size: 50px;
+}
+
+.btn{
+    margin-left: 10px;
+    border: 0.1px solid black !important;
+    border-radius: 7px;
+}   

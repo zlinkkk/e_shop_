@@ -11,5 +11,9 @@ def catalog(request):
     })
 
 
-def product_page(request):
-    return render(request, 'goods/product_page.html')
+def product_page(request, search_slug):
+    product = Products.objects.get(slug=search_slug)
+
+    return render(request, 'goods/product_page.html',{
+        'product': product
+    })

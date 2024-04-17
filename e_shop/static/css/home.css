@@ -23,6 +23,7 @@
 
 
 .card{
+    font-family: 'Stolzl Medium';
     margin-left: 30px;
     width: 225px;
     border-radius: 15px !important;
@@ -71,11 +72,12 @@
     font-family: 'Stolzl Medium';
     margin-top: 50px;
     text-align: center;
-    text-decoration: none;
+    list-style-type: none;
 }
 
 .main_section li {
+    list-style-type: none;
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
 }
