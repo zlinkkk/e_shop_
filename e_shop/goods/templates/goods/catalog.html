@@ -15,11 +15,11 @@
     {% for product in goods %}
     <div class="cards">
       {% if product.image %}
-        <img src="{{product.image.url}}" alt="{{ product.name }}" class="cards_img">
+        <a href="{% url 'catalog:product' product.slug %}"> <img src="{{product.image.url}}" alt="{{ product.name }}" class="cards_img"> </a>
         {% else %}
         <img src="{% static 'img/Без названия.jpg' %}" alt="{{ product.name }}" class="cards_img">
       {% endif %}
-      <div class="cards_title">{{ product.name }}</div>
+      <div class="cards_title"><a href="{% url 'catalog:product' product.slug %}">{{ product.name }}</a></div>
       <div class="cards_price">{{ product.price }} ₽</div>
       <div class="btns_keeper">
           <button class="btns">В корзину</button>
