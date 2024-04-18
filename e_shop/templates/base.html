@@ -33,7 +33,7 @@
           </ul>
 
           <form class="d-flex" role="search" action = "{% url 'catalog:search' %}" method = "get">
-              <input class="form-control me-2 custom" type="search" name = "q" placeholder="Поиск" aria-label="Search">
+              <input class="form-control me-2 custom" type="search" name = "q" required pattern="\S(.*\S)?" placeholder="Поиск" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Искать</button>
           </form>
 

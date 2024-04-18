@@ -6,5 +6,3 @@ from . import models
 @admin.register(models.Products)
 class ProductsAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name', )} 
-
-   
