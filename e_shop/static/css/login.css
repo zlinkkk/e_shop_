@@ -1,0 +1,12 @@
+.wrap {
+    display: flex;
+}
+
+.main_form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.main_form input {
+    margin-bottom: 10px;
+}
