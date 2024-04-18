@@ -13,8 +13,7 @@
 
 <div class = 'wrap'>
     <form action="{% url 'profile:login'%}" method="post" class = 'main_form'>
-      <input type="text" placeholder="Введите логин">
-      <input type="password" placeholder="Введите пароль">
+      {{form}}
     </form>
-  </div>
+  </div> 
 {% endblock %}
