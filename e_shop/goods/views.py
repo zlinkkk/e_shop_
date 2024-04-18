@@ -11,7 +11,9 @@ def catalog(request):
         goods = Products.objects.all()
     return render(request, 'goods/catalog.html', {
         'title': 'Каталог',
-        'goods': goods
+        'goods': goods,
+        'query': query,
+        'count': len(goods)
     })
 
 
