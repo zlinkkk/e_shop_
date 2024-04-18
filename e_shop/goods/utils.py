@@ -1,6 +1,5 @@
 from django.db.models import Q
 from goods.models import Products
-from django.db.models.functions import Lower
 
 
 def query_search(query):

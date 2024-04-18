@@ -13,7 +13,7 @@
 <h1 class = 'head'>Каталог</h1>
 
 {% if query %}
-  <h2 class = 'query'>Результаты по запросу '{{query}}':{{count}}</h2>
+  <h1 class = 'query'>Результаты по запросу '{{query}}': {{count}}</h2>
 {% endif %}
 <div class="catalog">
     {% for product in goods %}
