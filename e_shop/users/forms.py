@@ -5,3 +5,4 @@ from users.models import User
 class LoginForm(AuthenticationForm):
     class Meta:
         model = User
+    

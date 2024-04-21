@@ -9,11 +9,11 @@
 {% endblock %}
 
 {% block content %}
-<h1 class="head">Личный кабинет:</h1>
+<h1>Войти в аккаунт</h1>
 
-<div class = 'wrap'>
-    <form action="{% url 'profile:login'%}" method="post" class = 'main_form'>
-      {{form}}
-    </form>
-  </div> 
+<form action="" method="post" class="form">
+  {% csrf_token %}
+  {{form}}
+  <button type="submit">Войти</button>
+</form>
 {% endblock %}
