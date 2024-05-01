@@ -6,8 +6,9 @@ def login(request):
     form = LoginForm()
     return render(request, 'users/login.html', {
         'title': 'Вход',
-        'form': form 
+        'form': form
     })
+
 
 def profile(request):
     return render(request, 'users/profile.html', {
