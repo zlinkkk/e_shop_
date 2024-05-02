@@ -8,12 +8,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 {% endblock %}
 
+{% block title %}
+  <title>{{title}}</title>
+{% endblock %}
+
 {% block content %}
-<h1>Войти в аккаунт</h1>
+<h1 class = 'head'>Войти в аккаунт</h1>
 
 <form action="" method="post" class="form">
   {% csrf_token %}
-  {{form}}
+  {{form.as_p}}
   <button type="submit">Войти</button>
 </form>
+
+{% if error_msg != '' %}
+  <p style="text-align: center; color: #ff0000;">{{ error_msg }}</p>
+{% endif %}
+
 {% endblock %}

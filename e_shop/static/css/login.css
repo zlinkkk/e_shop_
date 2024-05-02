@@ -2,6 +2,12 @@
     display: flex;
 }
 
+.head{
+    margin-top: 100px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
 .form {
     display: flex;
     align-items: center;
