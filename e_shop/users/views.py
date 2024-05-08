@@ -33,6 +33,13 @@ def registration(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
+            data = form.cleaned_data
+            user = authenticate(request, username=data['username'], password=data['password2'])
+
+            if user and user.is_active:
+                login(request, user)
+                return HttpResponseRedirect(reverse('main:home'))
+
     else:
         form = UserCreationForm()
     return render(request, 'users/register.html', {'form': form})
