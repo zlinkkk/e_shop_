@@ -36,12 +36,19 @@
               <input class="form-control me-2 custom" type="search" name = "q" required pattern="\S(.*\S)?" placeholder="Поиск" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Искать</button>
           </form>
-
+          {% if user.is_authenticated %}
           <div class="d-flex ms-auto">
-              <a class="nav-link fw-light" href="{% url 'profile:login' %}">
-                  <i class="fa-solid fa-user --fa-font-solid"></i> Войти
+              <a class="nav-link fw-light" href="{% url 'profile:user_page' %}">
+                  <i class="fa-solid fa-user --fa-font-solid"></i>Профиль
               </a>
           </div>
+          {% else %}
+          <div class="d-flex ms-auto">
+            <a class="nav-link fw-light" href="{% url 'profile:login' %}">
+                <i class="fa-solid fa-user --fa-font-solid"></i> Войти
+            </a>
+        </div>
+          {% endif %}
       </div>
   </div>
 </nav>
