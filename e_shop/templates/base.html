@@ -38,9 +38,17 @@
           </form>
           {% if user.is_authenticated %}
           <div class="d-flex ms-auto">
-              <a class="nav-link fw-light" href="{% url 'profile:user_page' %}">
-                  <i class="fa-solid fa-user --fa-font-solid"></i>Профиль
+              <a class="nav-link fw-light" href="{% url 'cart:cart' %}">
+                  <i class="fa-solid fa-cart-shopping"></i>Корзина
               </a>
+          </div>
+
+          <div>
+            <div class="d-flex ms-auto">
+                <a class="nav-link fw-light" href="{% url 'profile:user_page' %}">
+                    <i class="fa-solid fa-user --fa-font-solid"></i>Профиль
+                </a>
+            </div>
           </div>
           {% else %}
           <div class="d-flex ms-auto">
