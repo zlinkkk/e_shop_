@@ -3,6 +3,7 @@
 
 {% block links %}
   <link rel="stylesheet" href="{% static 'css/catalog.css' %}">
+  <script src="{% static 'js/cart.js' %}"></script>
 {% endblock links %}
 
 {% block title %}
@@ -27,7 +28,7 @@
       <div class="cards_price">{{ product.price }} ₽</div>
       <div class="btns_keeper">
         {% if user.is_authenticated %}
-          <button class="btn btn-light">В корзину</button>
+          <button class="btn btn-light cart-update" data-product="{{product.id}}" data-action = "add">В корзину</button>
         {% else %}
         <a href="{% url 'profile:register' %}" class="btn btn-light">В корзину</a>
         {% endif %}
