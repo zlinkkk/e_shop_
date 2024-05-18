@@ -16,15 +16,4 @@ def add_item(request):
     print(action, product_id)
 
 
-    # if action == 'add':
-    #     order_element.count = (order_element.count) + 1
-    # elif action == 'delete':
-    #     order_element.count = (order_element.count) - 1
-
-    # order_element.save()
-
-    # if order_element.count <= 0:
-    #     order_element.delete()
-
-
     return JsonResponse('Товар добавлен в корзину', safe=False)

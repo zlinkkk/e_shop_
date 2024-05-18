@@ -2,10 +2,20 @@
 {% load static %}
 
 {% block links %}
-    <link rel="stylesheet" href='{% static "cart.css" %}'>
+    <link rel="stylesheet" href='{% static "css/cart.css" %}'>
 {% endblock %}
 
 {% block content %}
-    <p>Корзина</p>
-    
+    <p class = 'head'>Корзина</p>
+    <div class="row">
+		<div class="col-lg-12">
+			<div class="box-element">
+				<a class="btn btn-outline-dark" href="{% url 'catalog:index' %}">&#x2190; Вернуться к каталогу</a>
+				<table class="table">
+					<tr>
+						<th><h4>Товаров: <strong></strong></h4></th>
+						<th><h4>На сумму:<strong></strong></h4></th>
+						<th>
+                    </tr>
+                </table>
 {% endblock %}

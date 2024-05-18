@@ -3,7 +3,6 @@
 
 {% block links %}
     <link rel="stylesheet" href="{% static 'css/product_page.css' %}">
-
 {% endblock %}
 
 {% block content %}
@@ -15,7 +14,11 @@
       <p class = 'desc'>{{product.description}}</p>
       <p class = 'color'>{{product.color}}</p>
       <p class = 'price'>{{product.price}} ₽</p>
-      <button class = 'btn'>Добавить в корзину</button>
+      {% if user.is_authenticated %}
+          <button class="btn btn-light cart-update" data-product="{{product.id}}" data-action = "add">В корзину</button>
+        {% else %}
+        <a href="{% url 'profile:register' %}" class="btn btn-light">В корзину</a>
+        {% endif %}
     </div>
 </div>
 
