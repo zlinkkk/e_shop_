@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function updateOrder(product_id, action) {
-    // Prepend the base URL to the relative URL
     let baseUrl = window.location.protocol + "//" + window.location.host;
     let url = baseUrl + '/cart/add_item/';
 
@@ -21,7 +20,7 @@ function updateOrder(product_id, action) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'X-CSRFToken': csrftoken // Ensure csrftoken is defined somewhere in your script
+            'X-CSRFToken': csrftoken
         },
         body: JSON.stringify({'product_id': product_id, 'action': action})
     })

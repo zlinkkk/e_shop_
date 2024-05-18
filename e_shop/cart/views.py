@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from goods.models import *
-# from models import *
+from .models import *
 import json
 
 
@@ -15,6 +15,21 @@ def add_item(request):
     action = data['action']
     print(action, product_id)
 
-    buyer = request.user
+    buyer = request.user.buyer
     product = Products.objects.get(id=product_id)
+    order, created = Order.objects.get_or_create(buyer = buyer, complete = False)
+
+    order_element, created = Order_element.objects.get_or_create(order = order, product = product)
+
+    if action == 'add':
+        order_element.count = (order_element.count) + 1
+    elif action == 'delete':
+        order_element.count = (order_element.count) - 1
+
+    order_element.save()
+
+    if order_element.count <= 0:
+        order_element.delete()
+
+
     return JsonResponse('Товар добавлен в корзину', safe=False)
